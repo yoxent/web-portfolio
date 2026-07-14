@@ -12,7 +12,7 @@ export function Skills() {
   const visible = filterByTag(skillGroups, active);
 
   return (
-    <Section id="skills" title="Skills">
+    <Section id="skills" title="Skills" compact>
       <FilterChips value={active} onChange={setActive} />
 
       {visible.length ? (

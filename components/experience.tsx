@@ -12,7 +12,7 @@ export function Experience() {
   const visible = filterByTag(roles, active);
 
   return (
-    <Section id="experience" title="Experience">
+    <Section id="experience" title="Experience" compact>
       <FilterChips value={active} onChange={setActive} />
 
       {visible.length ? (

@@ -1,5 +1,8 @@
 import { SiteHeader } from "@/components/site-header";
 import { Hero } from "@/components/hero";
+import { About } from "@/components/about";
+import { FeaturedWork } from "@/components/featured-work";
+import { Contact } from "@/components/contact";
 
 export default function HomePage() {
   return (
@@ -7,6 +10,9 @@ export default function HomePage() {
       <SiteHeader />
       <main>
         <Hero />
+        <About />
+        <FeaturedWork />
+        <Contact />
       </main>
     </>
   );

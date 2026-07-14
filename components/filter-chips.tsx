@@ -14,7 +14,11 @@ export function FilterChips({
   options?: FilterValue[];
 }) {
   return (
-    <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+    <div
+      role="group"
+      aria-label="Filter by domain"
+      className="flex flex-wrap gap-x-6 gap-y-2 text-sm"
+    >
       {options.map((option) => {
         const isActive = option === value;
         return (
@@ -23,7 +27,7 @@ export function FilterChips({
             type="button"
             aria-pressed={isActive}
             onClick={() => onChange(option)}
-            className={`shrink-0 whitespace-nowrap pb-1 underline-offset-4 transition-colors ${
+            className={`shrink-0 whitespace-nowrap rounded-sm pb-1 underline-offset-4 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
               isActive
                 ? "text-ink underline decoration-accent"
                 : "text-muted underline decoration-transparent hover:text-ink hover:decoration-[color:var(--hairline)]"

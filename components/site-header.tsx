@@ -13,7 +13,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-3 px-6 py-4 sm:px-10 lg:px-16">
         <a
           href="#"
-          className="font-display text-lg font-medium tracking-tight text-ink"
+          className="rounded-sm font-display text-lg font-medium tracking-tight text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           {profile.shortName}
         </a>
@@ -26,7 +26,7 @@ export function SiteHeader() {
             <a
               key={link.href}
               href={link.href}
-              className="shrink-0 whitespace-nowrap transition-colors hover:text-ink"
+              className="shrink-0 whitespace-nowrap rounded-sm transition-colors hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               {link.label}
             </a>
@@ -37,7 +37,7 @@ export function SiteHeader() {
           <a
             href={profile.cvPath}
             download
-            className="whitespace-nowrap text-ink underline decoration-[color:var(--hairline)] underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
+            className="whitespace-nowrap rounded-sm text-ink underline decoration-[color:var(--hairline)] underline-offset-4 transition-colors hover:text-accent hover:decoration-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             Download CV
           </a>
@@ -45,7 +45,7 @@ export function SiteHeader() {
             href={profile.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="whitespace-nowrap text-muted transition-colors hover:text-ink"
+            className="whitespace-nowrap rounded-sm text-muted transition-colors hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             GitHub
           </a>
@@ -53,7 +53,7 @@ export function SiteHeader() {
             href={profile.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="whitespace-nowrap text-muted transition-colors hover:text-ink"
+            className="whitespace-nowrap rounded-sm text-muted transition-colors hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             LinkedIn
           </a>

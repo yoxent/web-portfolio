@@ -34,7 +34,7 @@ export function PortfolioShell() {
     setTab(next);
     const hash = toShellHash(next);
     if (window.location.hash !== hash) {
-      window.history.pushState(null, "", hash);
+      window.location.hash = hash;
     }
   }
 

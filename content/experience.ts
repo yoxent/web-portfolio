@@ -7,7 +7,7 @@ export const roles: Role[] = [
     title: "Full Stack & Agentic Systems Developer",
     start: "May 2026",
     end: "Present",
-    location: "Remote",
+    location: "Philippines",
     stack: ["TypeScript", "Next.js", "Cloudflare Workers", "Claude AI", "Cursor"],
     tags: ["Web", "AI"],
     bullets: [
@@ -22,7 +22,7 @@ export const roles: Role[] = [
     title: "Mobile Developer",
     start: "Feb 2026",
     end: "Present",
-    location: "Remote",
+    location: "Philippines",
     stack: ["Flutter", "Dart", "Android"],
     tags: ["Mobile"],
     bullets: [
@@ -35,7 +35,7 @@ export const roles: Role[] = [
     title: "Game Developer",
     start: "Aug 2023",
     end: "Jan 2026",
-    location: "Remote",
+    location: "Philippines, Hybrid",
     stack: ["Unity", "Unreal"],
     tags: ["Games"],
     bullets: [
@@ -49,7 +49,7 @@ export const roles: Role[] = [
     title: "Lead App Developer",
     start: "Oct 2016",
     end: "Jan 2026",
-    location: "Remote",
+    location: "Singapore, Remote",
     stack: ["Unity 3D"],
     tags: ["Games", "Mobile"],
     bullets: [
@@ -63,7 +63,7 @@ export const roles: Role[] = [
     title: "Senior Unreal Engine Developer",
     start: "Feb 2022",
     end: "Nov 2022",
-    location: "Remote",
+    location: "Philippines, Remote",
     stack: ["Unreal"],
     tags: ["Games", "Web"],
     bullets: [
@@ -77,7 +77,7 @@ export const roles: Role[] = [
     title: "Lead Unity 3D Developer",
     start: "May 2015",
     end: "Oct 2015",
-    location: "Remote",
+    location: "Poland, Remote",
     stack: ["Unity"],
     tags: ["Games"],
     bullets: [
@@ -90,7 +90,7 @@ export const roles: Role[] = [
     title: "Junior Unity 3D Developer",
     start: "Aug 2012",
     end: "Aug 2014",
-    location: "Remote",
+    location: "Denmark, Remote",
     stack: ["Unity"],
     tags: ["Games", "Web"],
     bullets: [

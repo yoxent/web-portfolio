@@ -2,6 +2,27 @@ import type { Project } from "./types";
 
 export const projects: Project[] = [
   {
+    id: "sovrun-ai-simulations",
+    title: "Sovrun AI Simulations",
+    blurb:
+      "Built striking and race sims in Unreal driven by parsed JSON. For MMA, GOAP (Goal-Oriented Action Planning) produced the fight plan and outcome for predetermined playback; the sprint race similarly played back predetermined results from JSON.",
+    tags: ["Games", "AI"],
+    company: "Sovrun",
+    roleId: "sovrun",
+    media: [
+      {
+        id: "mma",
+        label: "MMA",
+        src: "/videos/sovrun-mma.mp4",
+      },
+      {
+        id: "sprint",
+        label: "Sprint",
+        src: "/videos/sovrun-sprint.mp4",
+      },
+    ],
+  },
+  {
     id: "web-games-platform",
     title: "Web Games Platform",
     blurb:
@@ -28,12 +49,5 @@ export const projects: Project[] = [
     blurb:
       "Live mobile games and cognitive training apps in Unity integrating EEG/BCI hardware, shipped on Android and iOS.",
     tags: ["Games", "Mobile"],
-  },
-  {
-    id: "virtual-labs-metaverse",
-    title: "Virtual Labs Metaverse",
-    blurb:
-      "A multiplayer metaverse built in Unreal Engine with realtime interactions, UI, accounts, and Pixel Streaming to the web.",
-    tags: ["Games", "Web"],
   },
 ];

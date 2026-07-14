@@ -41,6 +41,8 @@ export const roles: Role[] = [
     bullets: [
       "Contributed to experimental games and simulations R&D spanning blockchain, autonomous worlds, AI simulations, and multiplayer systems.",
       "Collaborated across design, research, blockchain, and AI teams to ship prototypes and live features.",
+      "Built a striking-only MMA sim in Unreal: GOAP (Goal-Oriented Action Planning) generated the fight plan and outcome, delivered as JSON and parsed for predetermined playback.",
+      "Built a sprint race sim in Unreal driven by parsed JSON with a predetermined race outcome.",
     ],
   },
   {

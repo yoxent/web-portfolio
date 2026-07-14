@@ -15,4 +15,5 @@ export const profile: Profile = {
   githubOrg: "https://github.com/IndiePH/",
   linkedin: "https://www.linkedin.com/in/xentveran/",
   cvPath: "/Vincent-Veran-CV.pdf",
+  portraitPath: "/portrait.jpg",
 };

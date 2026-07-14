@@ -18,6 +18,14 @@ export type Profile = {
   githubOrg?: string;
   linkedin: string;
   cvPath: string;
+  portraitPath: string;
+};
+
+export type ProjectMedia = {
+  id: string;
+  label: string;
+  src: string;
+  poster?: string;
 };
 
 export type Project = {
@@ -26,6 +34,9 @@ export type Project = {
   blurb: string;
   tags: Tag[];
   links?: Link[];
+  media?: ProjectMedia[];
+  company?: string;
+  roleId?: string;
 };
 
 export type Role = {

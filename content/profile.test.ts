@@ -7,6 +7,7 @@ describe("profile", () => {
     expect(profile.github).toBe("https://github.com/yoxent/");
     expect(profile.linkedin).toBe("https://www.linkedin.com/in/xentveran/");
     expect(profile.cvPath).toBe("/Vincent-Veran-CV.pdf");
+    expect(profile.portraitPath).toBe("/portrait.jpg");
     expect(profile.title).toContain("Games");
     expect(profile.title).toContain("Full Stack");
     expect(profile.title).toContain("Agentic");

@@ -103,7 +103,7 @@ Upgrade the PDF CV into a polished, interactive single-page portfolio that hirin
 
 - Email: `xent.xent@gmail.com` (mailto)
 - GitHub: `https://github.com/yoxent/` (IndiePH org as secondary if useful)
-- LinkedIn: profile URL stored in content module (provide URL before ship; placeholder until then)
+- LinkedIn: `https://www.linkedin.com/in/xentveran/`
 - Location context: Quezon City, Philippines / open to remote as editorial copy if desired
 - Download CV repeated here
 
@@ -162,9 +162,8 @@ SkillGroup { id, label, items[], tags[] }
 
 ## Open items for implementation
 
-1. **LinkedIn profile URL** — required before production share; store in `content` (user to provide)
-2. **Final 3–5 featured projects** — confirm which CV items are public/shareable and add links where available
-3. Exact typeface pair and accent hex — chosen during UI build within editorial constraints above
+1. **Final 3–5 featured projects** — confirm which CV items are public/shareable and add links where available
+2. Exact typeface pair and accent hex — chosen during UI build within editorial constraints above
 
 ## Success criteria
 

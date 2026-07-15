@@ -1,13 +1,16 @@
-import type { Profile } from "./types";
+import type { FocusArea, Profile } from "./types";
 
 export const profile: Profile = {
   name: "Vincent Oliver Veran",
   shortName: "Vincent Veran",
-  title: "Senior Software Developer — Games · Full Stack · Agentic Systems",
+  title: "Senior Software Developer: Games · Full Stack · Agentic Systems",
   summary:
-    "Senior software developer with 10+ years across game development, full stack web engineering, and cross-platform mobile apps, with hands-on work in Unity3D, Unreal Engine, and TypeScript. Focused on shipping products and building agentic AI systems, including globally used games, cognitive apps, and interactive experiences.",
+    "I build games, web apps, and mobile tools, mostly with Unity, Unreal, and TypeScript. Lately I’ve also been exploring agentic workflows that help move product ideas into working software.",
+  aboutMore: [
+    "I care about clear product goals, solid fundamentals, and collaborating well with design, research, and other engineers. If that sounds useful for what you’re building, I’m happy to talk.",
+  ],
   seeking:
-    "Open to senior roles spanning games, full stack product engineering, and agentic systems — remote or hybrid.",
+    "Open to senior roles spanning games, full stack product engineering, and agentic systems, remote or hybrid.",
   email: "xent.xent@gmail.com",
   phone: "+639278885000",
   location: "Quezon City, Philippines",
@@ -17,3 +20,31 @@ export const profile: Profile = {
   cvPath: "/Vincent-Veran-CV.pdf",
   portraitPath: "/portrait.jpg",
 };
+
+/** About-page focus areas (inspired by a simple “what I work on” layout). */
+export const focusAreas: FocusArea[] = [
+  {
+    id: "games",
+    title: "Games",
+    description: "Unity and Unreal: prototypes, sims, and shipped interactive experiences.",
+    icon: "games",
+  },
+  {
+    id: "full-stack",
+    title: "Full stack",
+    description: "TypeScript web products from APIs and domain logic through to the UI.",
+    icon: "web",
+  },
+  {
+    id: "mobile",
+    title: "Mobile",
+    description: "Practical apps and tools for phones and TV across platforms.",
+    icon: "mobile",
+  },
+  {
+    id: "agentic",
+    title: "Agentic systems",
+    description: "AI-assisted workflows that speed delivery without skipping judgment.",
+    icon: "agentic",
+  },
+];

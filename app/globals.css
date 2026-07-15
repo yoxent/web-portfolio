@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+@theme inline {
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+}
+
+/* Defaults before JS (light). Inline styles from applyTheme override these. */
 :root {
   --ink: #141414;
   --paper: #f3f4f6;
@@ -10,16 +21,7 @@
   --bg-glow: radial-gradient(1200px 600px at 10% -10%, #d9e4ef 0%, transparent 55%),
     radial-gradient(900px 500px at 90% 0%, #ddeae4 0%, transparent 50%),
     var(--paper);
-}
-
-@theme inline {
-  --color-ink: var(--ink);
-  --color-paper: var(--paper);
-  --color-muted: var(--muted);
-  --color-accent: var(--accent);
-  --color-accent-fg: var(--accent-fg);
-  --font-display: var(--font-display);
-  --font-sans: var(--font-sans);
+  --selection: color-mix(in oklab, var(--accent) 35%, white);
 }
 
 html {
@@ -46,5 +48,5 @@ body {
 }
 
 ::selection {
-  background: color-mix(in oklab, var(--accent) 35%, white);
+  background: var(--selection);
 }

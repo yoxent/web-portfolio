@@ -1,5 +1,10 @@
 import Image from "next/image";
 import { profile } from "@/content/profile";
+import { SocialIconLinks } from "@/components/social-icon-links";
+import { FitOneLine } from "@/components/fit-one-line";
+
+const cvLinkClass =
+  "rounded-sm text-sm text-ink underline decoration-[color:var(--hairline)] underline-offset-4 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
 
 export function ShellSidebar() {
   return (
@@ -14,43 +19,22 @@ export function ShellSidebar() {
           priority
         />
       </div>
-      <div>
-        <p className="font-display text-2xl font-medium tracking-tight text-ink sm:text-3xl">
+      <div className="min-w-0">
+        <FitOneLine
+          className="font-display font-medium tracking-tight text-ink"
+          maxPx={30}
+          minPx={15}
+        >
           {profile.name}
-        </p>
+        </FitOneLine>
         <p className="mt-2 text-xs tracking-[0.12em] text-muted uppercase sm:text-sm">
           {profile.title}
         </p>
       </div>
-      <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
-        <a
-          href={profile.cvPath}
-          download
-          className="rounded-sm text-ink underline decoration-[color:var(--hairline)] underline-offset-4 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-        >
+      <div className="flex flex-col gap-3">
+        <SocialIconLinks />
+        <a href={profile.cvPath} download className={cvLinkClass}>
           Download CV
-        </a>
-        <a
-          href={`mailto:${profile.email}`}
-          className="rounded-sm text-ink underline decoration-[color:var(--hairline)] underline-offset-4 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-        >
-          Email
-        </a>
-        <a
-          href={profile.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="rounded-sm text-ink underline decoration-[color:var(--hairline)] underline-offset-4 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-        >
-          GitHub
-        </a>
-        <a
-          href={profile.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="rounded-sm text-ink underline decoration-[color:var(--hairline)] underline-offset-4 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-        >
-          LinkedIn
         </a>
       </div>
     </aside>

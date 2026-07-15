@@ -10,6 +10,8 @@ export type Profile = {
   shortName: string;
   title: string;
   summary: string;
+  /** Extra About paragraphs shown under the summary. */
+  aboutMore?: string[];
   seeking?: string;
   email: string;
   phone: string;
@@ -19,6 +21,13 @@ export type Profile = {
   linkedin: string;
   cvPath: string;
   portraitPath: string;
+};
+
+export type FocusArea = {
+  id: string;
+  title: string;
+  description: string;
+  icon: "games" | "web" | "mobile" | "agentic";
 };
 
 export type ProjectMedia = {

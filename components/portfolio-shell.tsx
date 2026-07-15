@@ -6,6 +6,7 @@ import { PanelAbout } from "@/components/panel-about";
 import { PanelWork } from "@/components/panel-work";
 import { PanelResume } from "@/components/panel-resume";
 import { PanelContact } from "@/components/panel-contact";
+import { ThemeToggle } from "@/components/theme-toggle";
 import {
   SHELL_TABS,
   parseShellTab,
@@ -45,32 +46,37 @@ export function PortfolioShell() {
       </div>
 
       <div className="flex min-h-0 min-w-0 flex-1 flex-col">
-        <div
-          role="tablist"
-          aria-label="Portfolio sections"
-          className="sticky top-0 z-10 -mx-4 flex gap-4 overflow-x-auto border-b border-[color:var(--hairline)] bg-[color-mix(in_oklab,var(--paper)_92%,transparent)] px-4 backdrop-blur-sm sm:mx-0 sm:px-0"
-        >
-          {SHELL_TABS.map((id) => {
-            const selected = tab === id;
-            return (
-              <button
-                key={id}
-                type="button"
-                role="tab"
-                aria-selected={selected}
-                id={`tab-${id}`}
-                aria-controls={`panel-${id}`}
-                onClick={() => selectTab(id)}
-                className={`shrink-0 border-b-2 px-1 py-3 text-sm tracking-[0.12em] uppercase transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
-                  selected
-                    ? "border-accent text-ink"
-                    : "border-transparent text-muted hover:text-ink"
-                }`}
-              >
-                {LABELS[id]}
-              </button>
-            );
-          })}
+        <div className="sticky top-0 z-10 -mx-4 flex items-end justify-between gap-3 border-b border-[color:var(--hairline)] bg-[color-mix(in_oklab,var(--paper)_92%,transparent)] px-4 backdrop-blur-sm sm:mx-0 sm:px-0">
+          <div
+            role="tablist"
+            aria-label="Portfolio sections"
+            className="flex min-w-0 flex-1 gap-4 overflow-x-auto"
+          >
+            {SHELL_TABS.map((id) => {
+              const selected = tab === id;
+              return (
+                <button
+                  key={id}
+                  type="button"
+                  role="tab"
+                  aria-selected={selected}
+                  id={`tab-${id}`}
+                  aria-controls={`panel-${id}`}
+                  onClick={() => selectTab(id)}
+                  className={`shrink-0 border-b-2 px-1 py-3 text-sm tracking-[0.12em] uppercase transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
+                    selected
+                      ? "border-accent text-ink"
+                      : "border-transparent text-muted hover:text-ink"
+                  }`}
+                >
+                  {LABELS[id]}
+                </button>
+              );
+            })}
+          </div>
+          <div className="pb-2">
+            <ThemeToggle />
+          </div>
         </div>
 
         <div

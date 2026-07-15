@@ -24,6 +24,7 @@ export function Section({
         <h3 className="font-display text-xl font-medium tracking-tight text-ink sm:text-2xl">
           {title}
         </h3>
+        <div className="mt-2 h-0.5 w-10 bg-accent" aria-hidden />
         <div className="mt-6">{children}</div>
       </section>
     );

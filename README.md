@@ -2,7 +2,7 @@
 
 A personal portfolio site built with [Next.js](https://nextjs.org) (App Router) and Tailwind CSS.
 
-**Live site:** https://portfolio-site-ten-bice.vercel.app
+**Live site:** https://yoxent.vercel.app
 
 ## Getting Started
 
@@ -14,6 +14,18 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. The page auto-updates as you edit files under `app/` and `components/`.
+
+### Contact form (Resend)
+
+Copy `.env.example` to `.env.local` and set:
+
+- `RESEND_API_KEY` from [Resend API keys](https://resend.com/api-keys)
+- `CONTACT_FROM_EMAIL=Portfolio <contact@pasttime.xyz>` (after verifying `pasttime.xyz` in Resend)
+- `RESEND_WEBHOOK_SECRET` if you use inbound webhooks
+
+Without a verified domain, local sends can use `onboarding@resend.dev` (only delivers to your Resend account email).
+
+Add the same variables in Vercel for production.
 
 ## Scripts
 
@@ -28,7 +40,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 The site is deployed on [Vercel](https://vercel.com) (Hobby plan) from the `yoxent/web-portfolio` GitHub repository.
 
-- **Production:** https://portfolio-site-ten-bice.vercel.app
+- **Production:** https://yoxent.vercel.app
 - Deploys are built with `next build` and served as static/prerendered content.
 
 To deploy manually via the Vercel CLI:

@@ -35,6 +35,10 @@ export type ProjectMedia = {
   label: string;
   src: string;
   poster?: string;
+  /** Defaults to video. Images render as aspect-video thumbs (same frame as demos). */
+  kind?: "video" | "image";
+  /** Optional outbound URL for image thumbs (e.g. live product). */
+  href?: string;
 };
 
 export type Project = {
@@ -65,4 +69,14 @@ export type SkillGroup = {
   label: string;
   items: string[];
   tags: Tag[];
+};
+
+export type Education = {
+  id: string;
+  school: string;
+  degree: string;
+  detail?: string;
+  start: string;
+  end: string;
+  location: string;
 };

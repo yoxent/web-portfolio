@@ -1,5 +1,6 @@
 import { profile } from "@/content/profile";
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
 
 type ContactPayload = {
   name?: unknown;
@@ -18,9 +19,18 @@ function isValidEmail(value: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
 
+function escapeHtml(value: string): string {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
 export async function POST(request: Request) {
-  const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
-  if (!accessKey) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
     return NextResponse.json(
       { ok: false, message: "Contact form is not configured yet." },
       { status: 503 },
@@ -53,29 +63,30 @@ export async function POST(request: Request) {
     );
   }
 
-  const response = await fetch("https://api.web3forms.com/submit", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      access_key: accessKey,
-      name,
-      email,
-      subject: `[Portfolio] ${subject}`,
-      message,
-      from_name: name,
-      replyto: email,
-      to: profile.email,
-    }),
+  const from =
+    process.env.CONTACT_FROM_EMAIL ?? `${profile.shortName} <onboarding@resend.dev>`;
+
+  const resend = new Resend(apiKey);
+  const { error } = await resend.emails.send({
+    from,
+    to: [profile.email],
+    replyTo: email,
+    subject: `[Portfolio] ${subject}`,
+    html: `
+      <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+      <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+      <p><strong>Subject:</strong> ${escapeHtml(subject)}</p>
+      <p><strong>Message:</strong></p>
+      <p>${escapeHtml(message).replace(/\n/g, "<br>")}</p>
+    `,
   });
 
-  const result = (await response.json()) as { success?: boolean; message?: string };
-
-  if (!response.ok || !result.success) {
+  if (error) {
     return NextResponse.json(
-      { ok: false, message: result.message ?? "Failed to send message." },
+      { ok: false, message: error.message ?? "Failed to send message." },
       { status: 502 },
     );
   }
 
-  return NextResponse.json({ ok: true, message: result.message ?? "Message sent." });
+  return NextResponse.json({ ok: true, message: "Message sent." });
 }

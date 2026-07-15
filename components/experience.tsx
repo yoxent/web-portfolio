@@ -12,16 +12,16 @@ export function Experience() {
   const visible = filterByTag(roles, active);
 
   return (
-    <Section id="experience" title="Experience" compact>
+    <Section id="experience" title="Work Experience" compact>
       <FilterChips value={active} onChange={setActive} />
 
       {visible.length ? (
-        <div className="mt-10 border-t border-[color:var(--hairline)]">
+        <div className="mt-8 border-t border-[color:var(--hairline)]">
           {visible.map((role) => (
             <Reveal key={role.id}>
               <article className="flex flex-col gap-2 border-b border-[color:var(--hairline)] py-8">
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8">
-                  <div>
+                  <div className="min-w-0">
                     <h3 className="font-display text-xl font-medium tracking-tight text-ink sm:text-2xl">
                       {role.title}
                     </h3>

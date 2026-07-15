@@ -3,6 +3,7 @@ import { roles } from "./experience";
 import { projects } from "./projects";
 import { skillGroups } from "./skills";
 import { profile } from "./profile";
+import { education } from "./education";
 import type { Tag } from "./types";
 
 const allowed: Tag[] = ["Games", "Web", "Mobile", "AI"];
@@ -32,6 +33,49 @@ describe("content integrity", () => {
     expect(projects.some((p) => p.id === "virtual-labs-metaverse")).toBe(false);
   });
 
+  it("links every work project to a resume role for timeline sorting", () => {
+    const roleIds = new Set(roles.map((r) => r.id));
+    for (const p of projects) {
+      expect(p.roleId).toBeTruthy();
+      expect(roleIds.has(p.roleId!)).toBe(true);
+    }
+  });
+
+  it("includes Pasttime live link and hub thumbnail for web games", () => {
+    const web = projects.find((p) => p.id === "web-games-platform");
+    expect(web).toBeTruthy();
+    expect(web!.links?.some((l) => l.href.includes("pasttime.xent-xent.workers.dev"))).toBe(
+      true,
+    );
+    const hub = web!.media?.find((m) => m.id === "hub");
+    expect(hub?.kind).toBe("image");
+    expect(hub?.src).toBe("/images/pasttime-hub.png");
+    expect(hub?.href).toContain("pasttime.xent-xent.workers.dev");
+  });
+
+  it("includes Neeuro Cogo, Memorie, and MindViewer store thumbnails", () => {
+    const neeuro = projects.find((p) => p.id === "neeuro-eeg-bci");
+    expect(neeuro).toBeTruthy();
+    expect(neeuro!.links).toBeUndefined();
+    expect(neeuro!.media?.map((m) => m.id)).toEqual([
+      "cogo-play",
+      "cogo-appstore",
+      "memorie-play",
+      "memorie-appstore",
+      "mindviewer-play",
+      "mindviewer-appstore",
+    ]);
+    expect(neeuro!.media?.map((m) => m.label)).toEqual([
+      "Cogo - Google Play",
+      "Cogo - App Store",
+      "Memorie - Google Play",
+      "Memorie - App Store",
+      "MindViewer - Google Play",
+      "MindViewer - App Store",
+    ]);
+    expect(neeuro!.media?.every((m) => m.kind === "image" && Boolean(m.href))).toBe(true);
+  });
+
   it("includes major CV roles and enriched Sovrun bullets", () => {
     const companies = roles.map((r) => r.company);
     expect(companies.some((c) => c.includes("Neeuro"))).toBe(true);
@@ -57,5 +101,13 @@ describe("content integrity", () => {
 
   it("exposes a portrait path on profile", () => {
     expect(profile.portraitPath).toBe("/portrait.jpg");
+  });
+
+  it("includes DLSU computer science education from the CV", () => {
+    expect(education.length).toBeGreaterThanOrEqual(1);
+    const dlsu = education.find((e) => e.id === "dlsu-bscs");
+    expect(dlsu).toBeTruthy();
+    expect(dlsu!.school).toContain("De La Salle");
+    expect(dlsu!.degree).toMatch(/Computer Science/i);
   });
 });

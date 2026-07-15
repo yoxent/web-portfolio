@@ -60,7 +60,7 @@ export function DemoPlayer({ mediaId, label, src }: DemoPlayerProps) {
           <button
             type="button"
             onClick={toggle}
-            className="absolute inset-0 flex items-center justify-center bg-[color-mix(in_oklab,var(--ink)_35%,transparent)] text-sm tracking-[0.15em] text-accent-fg uppercase transition-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            className="absolute inset-0 flex items-center justify-center bg-[color-mix(in_oklab,var(--ink)_85%,transparent)] text-[0.65rem] font-bold tracking-[0.15em] text-paper uppercase transition-opacity focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             Play {label}
           </button>

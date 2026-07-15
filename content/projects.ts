@@ -2,6 +2,43 @@ import type { Project } from "./types";
 
 export const projects: Project[] = [
   {
+    id: "web-games-platform",
+    title: "Web Games Platform",
+    blurb:
+      "A full stack web games platform featuring Klondike Solitaire and Word Guess, with daily puzzle scheduling and shared domain logic across a monorepo.",
+    tags: ["Web", "Games"],
+    company: "Independent",
+    roleId: "independent-fullstack-agentic",
+    links: [{ label: "Pasttime", href: "https://pasttime.xent-xent.workers.dev/" }],
+    media: [
+      {
+        id: "hub",
+        label: "Pasttime",
+        kind: "image",
+        src: "/images/pasttime-hub.png",
+        href: "https://pasttime.xent-xent.workers.dev/",
+      },
+    ],
+  },
+  {
+    id: "agentic-orchestration",
+    title: "Agentic Orchestration System",
+    blurb:
+      "An agentic orchestration system built with Claude AI and Cursor to automate multi-step development workflows, deployed on Cloudflare Workers.",
+    tags: ["AI", "Web"],
+    company: "Independent",
+    roleId: "independent-fullstack-agentic",
+  },
+  {
+    id: "android-tv-remote",
+    title: "Android TV Remote",
+    blurb:
+      "An Android app that replaces physical smart TV remotes, with device discovery, remote input mapping, and a one-handed touch UI.",
+    tags: ["Mobile"],
+    company: "Independent",
+    roleId: "independent-mobile",
+  },
+  {
     id: "sovrun-ai-simulations",
     title: "Sovrun AI Simulations",
     blurb:
@@ -23,31 +60,56 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "web-games-platform",
-    title: "Web Games Platform",
-    blurb:
-      "A full stack web games platform featuring Klondike Solitaire and Word Guess, with daily puzzle scheduling and shared domain logic across a monorepo.",
-    tags: ["Web", "Games"],
-  },
-  {
-    id: "agentic-orchestration",
-    title: "Agentic Orchestration System",
-    blurb:
-      "An agentic orchestration system built with Claude AI and Cursor to automate multi-step development workflows, deployed on Cloudflare Workers.",
-    tags: ["AI", "Web"],
-  },
-  {
-    id: "android-tv-remote",
-    title: "Android TV Remote",
-    blurb:
-      "An Android app that replaces physical smart TV remotes, with device discovery, remote input mapping, and a one-handed touch UI.",
-    tags: ["Mobile"],
-  },
-  {
     id: "neeuro-eeg-bci",
     title: "Neeuro Cognitive Training Apps",
     blurb:
       "Live mobile games and cognitive training apps in Unity integrating EEG/BCI hardware, shipped on Android and iOS.",
     tags: ["Games", "Mobile"],
+    company: "Neeuro",
+    roleId: "neeuro",
+    media: [
+      {
+        id: "cogo-play",
+        label: "Cogo - Google Play",
+        kind: "image",
+        src: "/images/neeuro-cogo-play.png",
+        href: "https://play.google.com/store/apps/details?id=com.neeuro.cogo&hl=en_US",
+      },
+      {
+        id: "cogo-appstore",
+        label: "Cogo - App Store",
+        kind: "image",
+        src: "/images/neeuro-cogo-appstore.png",
+        href: "https://apps.apple.com/us/app/cogo-attention-training/id1631065149",
+      },
+      {
+        id: "memorie-play",
+        label: "Memorie - Google Play",
+        kind: "image",
+        src: "/images/neeuro-memorie-play.png",
+        href: "https://play.google.com/store/apps/details?id=com.neeuro.memorie",
+      },
+      {
+        id: "memorie-appstore",
+        label: "Memorie - App Store",
+        kind: "image",
+        src: "/images/neeuro-memorie-appstore.png",
+        href: "https://apps.apple.com/us/app/memorie-hd/id1041865946",
+      },
+      {
+        id: "mindviewer-play",
+        label: "MindViewer - Google Play",
+        kind: "image",
+        src: "/images/neeuro-mindviewer-play.png",
+        href: "https://play.google.com/store/apps/details?id=com.neeuro.mindviewer",
+      },
+      {
+        id: "mindviewer-appstore",
+        label: "MindViewer - App Store",
+        kind: "image",
+        src: "/images/neeuro-mindviewer-appstore.png",
+        href: "https://apps.apple.com/us/app/mindviewer/id1436471710",
+      },
+    ],
   },
 ];

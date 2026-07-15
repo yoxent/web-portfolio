@@ -2,6 +2,20 @@ import type { Role } from "./types";
 
 export const roles: Role[] = [
   {
+    id: "independent-sce",
+    company: "Independent",
+    title: "Agentic Systems Developer",
+    start: "Jul 2026",
+    end: "Present",
+    location: "Philippines",
+    stack: ["TypeScript", "Cloudflare Workers", "D1", "MCP", "SQLite"],
+    tags: ["AI", "Web"],
+    bullets: [
+      "Built Semantic Context Engine (SCE), a local-first retrieval layer for AI coding agents with keyword, semantic, hybrid, and AST search exposed as CLI and MCP.",
+      "Shipped a Cloudflare Workers + D1 demo searching 12,000+ chunks of Atlassian documentation across four search modes.",
+    ],
+  },
+  {
     id: "independent-fullstack-agentic",
     company: "Independent",
     title: "Full Stack & Agentic Systems Developer",
@@ -14,19 +28,6 @@ export const roles: Role[] = [
       "Built a full stack web games platform (Klondike Solitaire, Word Guess) with daily puzzle scheduling and shared domain logic in a monorepo.",
       "Designed agentic orchestration workflows with Claude AI and Cursor to accelerate product development.",
       "Deployed to Cloudflare Workers from a turborepo workspace.",
-    ],
-  },
-  {
-    id: "independent-mobile",
-    company: "Independent",
-    title: "Mobile Developer",
-    start: "Feb 2026",
-    end: "Present",
-    location: "Philippines",
-    stack: ["Flutter", "Dart", "Android"],
-    tags: ["Mobile"],
-    bullets: [
-      "Built an Android app replacing physical smart TV remotes, including device discovery, remote input mapping, and a one-handed touch UI.",
     ],
   },
   {

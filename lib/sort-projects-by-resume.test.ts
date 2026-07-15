@@ -7,9 +7,9 @@ describe("sortProjectsByResumeTimeline", () => {
   it("orders work by resume role timeline without needing visible dates", () => {
     const ordered = sortProjectsByResumeTimeline(projects, roles);
     expect(ordered.map((p) => p.id)).toEqual([
+      "semantic-context-engine",
       "web-games-platform",
       "agentic-orchestration",
-      "android-tv-remote",
       "sovrun-ai-simulations",
       "neeuro-eeg-bci",
     ]);

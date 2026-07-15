@@ -53,6 +53,16 @@ describe("content integrity", () => {
     expect(hub?.href).toContain("pasttime.xent-xent.workers.dev");
   });
 
+  it("includes SCE hub thumbnail linked to the live demo", () => {
+    const sce = projects.find((p) => p.id === "semantic-context-engine");
+    expect(sce).toBeTruthy();
+    expect(sce!.links).toBeUndefined();
+    const hub = sce!.media?.find((m) => m.id === "hub");
+    expect(hub?.kind).toBe("image");
+    expect(hub?.src).toBe("/images/sce-hub.png");
+    expect(hub?.href).toContain("sce-web.xent-xent.workers.dev");
+  });
+
   it("includes Neeuro Cogo, Memorie, and MindViewer store thumbnails", () => {
     const neeuro = projects.find((p) => p.id === "neeuro-eeg-bci");
     expect(neeuro).toBeTruthy();

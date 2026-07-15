@@ -5,7 +5,7 @@ export const profile: Profile = {
   shortName: "Vincent Veran",
   title: "Senior Software Developer: Games · Full Stack · Agentic Systems",
   summary:
-    "I build games, web products, and mobile tools — mainly Unity, Unreal, and modern TypeScript stacks. I also apply that same craft to agentic workflows that turn product ideas into working software.",
+    "I build games, web products, and mobile tools, mainly Unity, Unreal, and modern TypeScript stacks. I also apply that same craft to agentic workflows that turn product ideas into working software.",
   aboutMore: [
     "I care about clear product goals, solid fundamentals, and collaborating well with design, research, and other engineers. If that sounds useful for what you’re building, I’m happy to talk.",
   ],

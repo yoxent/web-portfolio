@@ -2,6 +2,24 @@ import type { Project } from "./types";
 
 export const projects: Project[] = [
   {
+    id: "semantic-context-engine",
+    title: "Semantic Context Engine",
+    blurb:
+      "A local-first retrieval engine for AI coding agents with keyword, semantic, hybrid, and AST search, exposed as CLI and MCP, with a Cloudflare Workers + D1 demo over Atlassian docs.",
+    tags: ["AI", "Web"],
+    company: "Independent",
+    roleId: "independent-sce",
+    media: [
+      {
+        id: "hub",
+        label: "SCE",
+        kind: "image",
+        src: "/images/sce-hub.png",
+        href: "https://sce-web.xent-xent.workers.dev/",
+      },
+    ],
+  },
+  {
     id: "web-games-platform",
     title: "Web Games Platform",
     blurb:
@@ -28,15 +46,6 @@ export const projects: Project[] = [
     tags: ["AI", "Web"],
     company: "Independent",
     roleId: "independent-fullstack-agentic",
-  },
-  {
-    id: "android-tv-remote",
-    title: "Android TV Remote",
-    blurb:
-      "An Android app that replaces physical smart TV remotes, with device discovery, remote input mapping, and a one-handed touch UI.",
-    tags: ["Mobile"],
-    company: "Independent",
-    roleId: "independent-mobile",
   },
   {
     id: "sovrun-ai-simulations",

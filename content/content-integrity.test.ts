@@ -44,13 +44,13 @@ describe("content integrity", () => {
   it("includes Pasttime live link and hub thumbnail for web games", () => {
     const web = projects.find((p) => p.id === "web-games-platform");
     expect(web).toBeTruthy();
-    expect(web!.links?.some((l) => l.href.includes("pasttime.xent-xent.workers.dev"))).toBe(
+    expect(web!.links?.some((l) => l.href.includes("gamehub.pasttime.xyz"))).toBe(
       true,
     );
     const hub = web!.media?.find((m) => m.id === "hub");
     expect(hub?.kind).toBe("image");
     expect(hub?.src).toBe("/images/pasttime-hub.png");
-    expect(hub?.href).toContain("pasttime.xent-xent.workers.dev");
+    expect(hub?.href).toContain("gamehub.pasttime.xyz");
   });
 
   it("includes SCE hub thumbnail linked to the live demo", () => {
@@ -60,7 +60,7 @@ describe("content integrity", () => {
     const hub = sce!.media?.find((m) => m.id === "hub");
     expect(hub?.kind).toBe("image");
     expect(hub?.src).toBe("/images/sce-hub.png");
-    expect(hub?.href).toContain("sce-web.xent-xent.workers.dev");
+    expect(hub?.href).toContain("sce-web.pasttime.xyz");
   });
 
   it("includes Neeuro Cogo, Memorie, and MindViewer store thumbnails", () => {

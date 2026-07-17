@@ -33,7 +33,7 @@ export const skillGroups: SkillGroup[] = [
       "Cloudflare Workers",
       "Flutter",
       "Git",
-      "Node.js/npm workspaces",
+      "Node.js",
       "OpenCode",
       "OpenRouter",
       "Perforce",

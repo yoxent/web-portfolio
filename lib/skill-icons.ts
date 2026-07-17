@@ -32,7 +32,7 @@ const ICON_EXPORT_BY_LABEL: Record<string, string | null> = {
   "Cloudflare Workers": "siCloudflareworkers",
   Flutter: "siFlutter",
   Git: "siGit",
-  "Node.js/npm workspaces": "siNodedotjs",
+  "Node.js": "siNodedotjs",
   OpenCode: "siOpencode",
   OpenRouter: "siOpenrouter",
   Perforce: "siPerforce",

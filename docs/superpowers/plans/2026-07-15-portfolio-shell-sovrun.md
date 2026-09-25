@@ -4,6 +4,8 @@
 
 **Goal:** Pivot the long-scroll portfolio into an editorial one-viewport app shell (About · Work · Resume · Contact) with sidebar portrait, and ship the first media-backed Work entry — Sovrun AI Simulations — with self-hosted 720p DemoPlayers.
 
+**Production:** [https://yoxent.vercel.app/](https://yoxent.vercel.app/) (recorded 2026-09-25). Current setup is in the README.
+
 **Architecture:** Client `PortfolioShell` owns tab state synced to URL hash. Typed `content/*` modules gain `portraitPath`, optional project `media` / `company` / `roleId`. Pure helpers handle tab parsing and single-active media playback; UI panels reuse existing filters/content. Static assets live under `public/`.
 
 **Tech Stack:** Next.js App Router · TypeScript · Tailwind CSS v4 · next/font (Fraunces + Manrope) · Vitest · ffmpeg (asset prep) · Vercel Hobby

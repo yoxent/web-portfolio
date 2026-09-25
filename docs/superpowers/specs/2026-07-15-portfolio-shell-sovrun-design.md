@@ -2,6 +2,7 @@
 
 **Date:** 2026-07-15  
 **Status:** Approved for planning  
+**Production:** [https://yoxent.vercel.app/](https://yoxent.vercel.app/) — operator notes are in the README. This spec is the 2026-07-15 shell design and does not track later changes (contact form, themes, later Work entries).  
 **Owner:** Vincent Oliver Veran  
 **Scope:** Pivot the existing long-scroll portfolio to an editorial one-viewport app shell, and add the first media-backed Work entry (Sovrun sims), with a content model ready for more projects later.
 

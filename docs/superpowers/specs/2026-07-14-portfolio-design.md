@@ -2,6 +2,7 @@
 
 **Date:** 2026-07-14  
 **Status:** Approved for planning  
+**Production:** [https://yoxent.vercel.app/](https://yoxent.vercel.app/) — operator notes are in the README. This spec is the 2026-07-14 design and does not track later changes (app shell, contact form, themes).  
 **Owner:** Vincent Oliver Veran  
 **Deploy target:** Vercel Hobby tier  
 
@@ -50,7 +51,7 @@ Upgrade the PDF CV into a polished, interactive single-page portfolio that hirin
 1. Build and verify locally (`npm run build`)
 2. Push to GitHub
 3. Vercel → Import Git repository (project created on import; do not pre-create empty project)
-4. Ship `*.vercel.app` URL; custom domain later if desired
+4. Production URL: [https://yoxent.vercel.app/](https://yoxent.vercel.app/); custom domain later if desired
 
 ### Backlog (explicit)
 

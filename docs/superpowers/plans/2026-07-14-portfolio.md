@@ -4,6 +4,8 @@
 
 **Goal:** Ship a polished single-page editorial portfolio for Vincent Veran on Vercel Hobby, backed by typed content from his CV, with filters, PDF download, and mailto/GitHub/LinkedIn CTAs.
 
+**Production:** [https://yoxent.vercel.app/](https://yoxent.vercel.app/) (recorded 2026-09-25). Current setup is in the README.
+
 **Architecture:** Next.js App Router single page (`/`) composed of section components fed by `content/*.ts` modules. Client-side tag filtering lives in a pure util + small client components. Static PDF in `public/`. No backend or env vars.
 
 **Tech Stack:** Next.js (App Router) · TypeScript · Tailwind CSS · next/font (Google) · Vitest · Vercel Hobby
@@ -800,9 +802,9 @@ Open `*.vercel.app`:
 - LinkedIn `https://www.linkedin.com/in/xentveran/`
 - Filters work
 
-- [ ] **Step 4: Record URL**
+- [x] **Step 4: Record URL**
 
-Add production URL as a short note at bottom of this plan or in README when known.
+Production: [https://yoxent.vercel.app/](https://yoxent.vercel.app/). Setup notes live in the README.
 
 - [ ] **Step 5: Commit deploy notes only if README updated**
 
